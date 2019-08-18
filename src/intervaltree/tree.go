@@ -280,7 +280,7 @@ func (itree *ITree) DeleteFixup(node *INode) {
 				}
 				tw.Icolor = node.Parent.Icolor
 				node.Parent.Icolor = BLACK
-				tw.Right.Icolor = BLACK
+				tw.Left.Icolor = BLACK
 				itree.RightRotate(node.Parent)
 				node = itree.Root
 			}
